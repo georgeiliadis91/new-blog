@@ -80,4 +80,9 @@
         line-height: 24px;
     }
 
+    :global(main a) {
+        text-decoration: none;
+        color:#F96743;
+    }
+
 </style>

@@ -5,9 +5,6 @@ import {compile} from 'mdsvex';
 export async function load() {
 	const response = await fetch(`${CMS_BASE_URL}${CMS_API_ROUTES.home}`);
     const data  = await response.json();
-    console.log(data);
     const content = await compile(data.portofolio);
-    console.log(content);
-    return content
-    ;
+    return content;
 }
