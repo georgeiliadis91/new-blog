@@ -1,6 +1,4 @@
 <script>
-    import { SOCIAL_ICON_SVGS } from '$lib/config.js';
-    export let data;
     const year = new Date().getFullYear();
 </script>
 
@@ -20,12 +18,8 @@
 
 <footer>
     <p> Copyright © {year} | George Iliadis </p>
-    <div class="social-container">
-        {#each Object.entries(SOCIAL_ICON_SVGS) as [key,val]}
-                <a href={data[key]}>
-                    {@html val}
-                </a>
-        {/each}
+    <div>
+        links
     </div>
 </footer>
 
@@ -63,9 +57,6 @@
 
     header a:hover {
         color: #F96743;
-    }
-
-    header nav a:hover {
         text-underline-offset: 4px;
         text-decoration-line: underline;
         text-decoration-style: wavy;
@@ -84,24 +75,6 @@
         align-items: center;
         padding: 16px 0;
         border-top: 1px solid #F96743;
-    }
-
-    footer div.social-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 16px;
-    }
-
-    :global(footer div.social-container svg) {
-        width:24px;
-        height:24px;
-        fill: #F96743;
-    }
-
-
-    :global(footer div.social-container svg path) {
-        fill: #F96743;
     }
 
     :global(h1) {
